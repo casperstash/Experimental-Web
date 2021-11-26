@@ -1,0 +1,40 @@
+body{
+    background-color: #171717;
+}
+
+h1{
+    font-family: 'Comforter Brush', cursive;
+    text-align: left;
+    font-size: 48px;
+    color: white;
+    display: block;
+    padding-left: 5%;
+}
+
+p{
+    font-family: 'Quicksand', sans-serif;
+    text-align: left;
+    color: white;
+    display: inline-block;
+    padding-left: 7%;
+}
+
+.lensimg{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    margin-top: -10%;
+}
+
+.tagline{
+    font-family: 'M PLUS 1 Code', sans-serif;
+    font-size: 24px;
+    text-align: center;
+    height: 100%;
+    width: 30%;
+    margin-top: 3%;
+    margin-left: 35%;
+    color: black;
+    background-color: #F9191F;
+}
