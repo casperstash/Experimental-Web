@@ -1,9 +1,47 @@
-body{
-    background-color: #171717;
+#bg{
+    background-image: url("bg_animation\\bg000.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center; 
+    background-size: 100% auto;
+}
+
+canvas {
+    position: fixed;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#controllers {
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    text-align: center;
+    width: 100%;
+    padding: 10px;
+}
+
+#blocker {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+#bg{
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center; 
+    background-size: 100% auto;
 }
 
 h1{
-    font-family: 'Comforter Brush', cursive;
+    font-family: 'Rubik', sans-serif;
     text-align: left;
     font-size: 48px;
     color: white;
@@ -12,19 +50,143 @@ h1{
 }
 
 p{
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'Outfit', sans-serif;
+    text-align: left;
+    font-size: 16px;
+    color: white;
+    display: block;
+    margin-top: -2%;
+    padding-left: 22%;
+}
+
+p2{
+    font-family: 'Outfit', sans-serif;
+    font-size: 24px;
     text-align: left;
     color: white;
     display: inline-block;
-    padding-left: 7%;
+    padding-left: 8%;
+    width: 50%;
 }
+
+p3{
+    font-family: 'Outfit', sans-serif;
+    font-size: 24px;
+    text-align: left;
+    color: white;
+    display: inline-block;
+    padding-left: 12%;
+    width: 50%;
+}
+
+p4{
+    font-family: 'Outfit', sans-serif;
+    font-size: 24px;
+    text-align: left;
+    color: white;
+    display: inline-block;
+    padding-left: 16%;
+    width: 50%;
+}
+
+p5{
+    font-family: 'Outfit', sans-serif;
+    font-size: 24px;
+    text-align: center;
+    color: white;
+    display: inline-block;
+    margin-left: 22%;
+    width: auto;
+}
+
+p6{
+    font-family: 'Outfit', sans-serif;
+    font-size: 24px;
+    text-align: center;
+    color: white;
+    display: inline-block;
+    margin-left: 17.1%;
+    width: auto;
+}
+
+p7{
+    font-family: 'Outfit', sans-serif;
+    font-size: 24px;
+    text-align: center;
+    color: white;
+    display: inline-block;
+    padding-left: 13.1%;
+    width: auto;
+}
+
+p8{
+    font-family: 'Outfit', sans-serif;
+    font-size: 16px;
+    text-align: center;
+    color:white;
+    display: inline-flex;
+    width: auto;
+    margin-left: 5%;
+}
+
+p9{
+    font-family: 'Outfit', sans-serif;
+    font-size: 16px;
+    text-align: center;
+    color:white;
+    display: inline-flex;
+    width: auto;
+    margin-left: 4.5%;
+}
+
+p10{
+    font-family: 'Outfit', sans-serif;
+    font-size: 16px;
+    text-align: center;
+    color:white;
+    display: inline-flex;
+    width: auto;
+    margin-left: 3.85%;
+}
+
+p11{
+    font-family: 'Outfit', sans-serif;
+    font-size: 16px;
+    text-align: center;
+    color:white;
+    display: block;
+    width: auto;
+    margin-top: 0.5%;
+    margin-left: 89.3%;
+}
+
 
 .lensimg{
     display: block;
     margin-left: auto;
     margin-right: auto;
     width: 50%;
-    margin-top: -10%;
+    margin-top: -15%;
+}
+
+.leftbox{
+    display: in-line-block;
+    width: 22%;
+    height: 100%;
+    margin-top: -35%;
+    margin-left: 2%;
+    /* background-color: #F9191F; */
+    border: 2px solid #F9191F;
+}
+
+.rightbox{
+    display: in-line-block;
+    width: 22%;
+    height: 100%;
+    margin-top: -30%;
+    margin-left: 76%;
+    /* background-color: #F9191F; */
+    border: 2px solid #F9191F;
 }
 
 .tagline{
@@ -33,7 +195,7 @@ p{
     text-align: center;
     height: 100%;
     width: 30%;
-    margin-top: 3%;
+    margin-top: 5%;
     margin-left: 35%;
     color: black;
     background-color: #F9191F;
