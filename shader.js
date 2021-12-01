@@ -93,7 +93,16 @@ void main() {
     vPosition = position;
     vec4 mvPosition = modelViewMatrix * vec4( position, 1);
     gl_Position = projectionMatrix * mvPosition ;
-    gl_PointSize = cnoise(vPosition* 4.5)*4.+ 3.5/-mvPosition.z;
+    gl_PointSize = cnoise(vPosition* 3.)*4.+ 4.5/-mvPosition.z;
+    // vPosition = position;
+    // vec4 mvPosition = modelViewMatrix * vec4( position, 1.0 );
+    // gl_Position = projectionMatrix * mvPosition;
+    
+    // gl_Position.x += 0.1*cnoise(vPosition.xyz*100.+uTime);
+    // gl_Position.y += 0.1*cnoise(vPosition.yzx*100.+uTime);
+    // gl_Position.z += 0.1*cnoise(vPosition.zxy*100.+uTime);
+    
+    // gl_PointSize = cnoise(vPosition* 4.5)*4.+ 3.5/-mvPosition.z;
   }
   
 `

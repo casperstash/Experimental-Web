@@ -38,7 +38,7 @@ class Model {
 	    vertexShader: vertex,
 	    fragmentShader: fragment,
 	    uniforms: {
-		    uTime: { value: 0.5 },
+		    uTime: { value: 0.1 },
 	        },
     })
           
@@ -107,7 +107,7 @@ window.addEventListener('resize', onWindowResize, false);
 /* model import */
 const human = new Model({
     name: 'human',
-    file: 'assets\human.glb',
+    file: 'assets/human.glb',
     scene: scene
 })
 
@@ -118,6 +118,6 @@ const animate = function() {
     renderer.render(scene, camera);
    
 
-    // human.shaderMaterial.uniforms.uTime.value = (Date.now() - start_time)*.001;
+    //  human.shaderMaterial.uniforms.uTime.value = (Date.now() - start_time)*.0001;
 };
 animate();

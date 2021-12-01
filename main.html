@@ -9,12 +9,12 @@
             <title>Emyreal Logistics</title>
         </head>
         <body>
-        <div id="controllers"></div>
+        <!-- <div id="controllers"></div>
         <div id="container"></div>
         <div id="blocker"></div>
-        <canvas class="webgl"></canvas>
+        <canvas class="webgl"></canvas> -->
         <!-- <img src="assets\icon.png" class="lensimg" alt="lens">  -->
-        <div class="bg" style="background-image: url(bg_animation/bg000.jpg);"> </div>
+    <div class="bg" style="background-image: url(bg_animation/bg000.jpg);">
 
         <h1>Jag_Bot 2071</h1>
         <p>Empyreal Logistics</p>
@@ -32,6 +32,7 @@
         <div class= "leftbox">.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.</div>
         <div class= "rightbox">.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.</div>
         <div class="tagline">The new revolutional patrol network</div>
+    </div>
         </body>
         <script type="text/javascript" src="http://code.jquery.com/jquery-1.4.2.min.js"></script>
         <script src="shader.js" ></script>
@@ -50,7 +51,7 @@
 
             $(document).ready(() => {
             for (var i = 0; i < totalFrames + 1; i++) {
-                 $("body").append(`<div class="body" style="background-image: url('${imagePath}/bg00-${i}.jpg');"></div>`);
+                 $("body").append(`<div class="body" style="background-image: url('${imagePath}/bg00${i}.jpg');"></div>`);
                 // $("body").append(`<div class="body" style="background-image: url('${imgarray[i]}');"></div>`);
                  console.log('hi');
                 }
