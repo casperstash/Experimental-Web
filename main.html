@@ -14,11 +14,11 @@
         <div id="blocker"></div>
         <canvas class="webgl"></canvas> -->
         <!-- <img src="assets\icon.png" class="lensimg" alt="lens">  -->
-    <div class="bg" style="background-image: url(bg_animation/bg000.jpg);">
+    <div id="bg">
 
         <h1>Jag_Bot 2071</h1>
-        <p>Empyreal Logistics</p>
-        <p2>The</p2>
+        <p id='p0'>Empyreal Logistics</p>
+        <p id='p1'>The</p2>
         <p5>{Sharp}</p5>
         <p8>Deployment</p8>
         <p3>The</p3>
@@ -50,8 +50,8 @@
             console.log(imgarray);
 
             $(document).ready(() => {
-            for (var i = 0; i < totalFrames + 1; i++) {
-                 $("body").append(`<div class="body" style="background-image: url('${imagePath}/bg00${i}.jpg');"></div>`);
+            for (var i = totalFrames + 1; i >= 0; i--) {
+                 $("#bg").append('<div class="bg" style="background-image: url('+imagePath+'/bg00'+i+'.jpg);"></div>');
                 // $("body").append(`<div class="body" style="background-image: url('${imgarray[i]}');"></div>`);
                  console.log('hi');
                 }

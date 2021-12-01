@@ -7,7 +7,7 @@
 } */
 
 #bg{
-    background-image: url("bg_animation\bg000.jpg");
+    background-image: url("bg_animation/bg000.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center; 
@@ -44,8 +44,19 @@ canvas {
 #bg{
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-position: center; 
+    background-position: inherit; 
     background-size: 100% auto;
+    width:100vw;
+    height:100vh;
+
+}
+body{
+    margion:0;
+}
+.bg{
+    width:100vw;
+    height:50vh;
+    position:absolute;
 }
 
 h1{
@@ -62,22 +73,22 @@ p{
     text-align: left;
     font-size: 16px;
     color: white;
+    
+}
+#p0{
     display: block;
     margin-top: -2%;
     padding-left: 22%;
 }
 
-p2{
-    font-family: 'Outfit', sans-serif;
-    font-size: 24px;
-    text-align: left;
-    color: white;
+#p1{
+
     display: inline-block;
     padding-left: 8%;
     width: 50%;
 }
 
-p3{
+#p2{
     font-family: 'Outfit', sans-serif;
     font-size: 24px;
     text-align: left;
@@ -178,7 +189,8 @@ p11{
 }
 
 .leftbox{
-    display: in-line-block;
+    display: flex;
+    flex-direction:column;
     width: 22%;
     height: 100%;
     margin-top: -35%;
