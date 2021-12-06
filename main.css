@@ -1,17 +1,16 @@
-/* body{
-    background-image: url("bg_animation\\bg000.jpg");
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center; 
-    background-size: 100% auto;
-} */
+body{
+    margin: 0%;
+    margin-top: -2.1%;
+}
 
 #bg{
-    background-image: url("bg_animation/bg000.jpg");
+    background-color: black;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-position: center; 
+    background-position: inherit; 
     background-size: 100% auto;
+    width:100%;
+    height:100%;
 }
 
 canvas {
@@ -39,24 +38,7 @@ canvas {
     left: 0;
     bottom: 0;
     right: 0;
-}
-
-#bg{
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: inherit; 
-    background-size: 100% auto;
-    width:100vw;
-    height:100vh;
-
-}
-body{
-    margion:0;
-}
-.bg{
-    width:100vw;
-    height:50vh;
-    position:absolute;
+    display: none;
 }
 
 h1{
@@ -66,113 +48,83 @@ h1{
     color: white;
     display: block;
     padding-left: 5%;
+    padding-top: 5%;
 }
 
 p{
     font-family: 'Outfit', sans-serif;
-    text-align: left;
-    font-size: 16px;
     color: white;
     
 }
 #p0{
+    text-align: left;
     display: block;
-    margin-top: -2%;
     padding-left: 22%;
 }
 
 #p1{
-
+    text-align: left;
+    font-size: 24px;
     display: inline-block;
-    padding-left: 8%;
+    color: white;
     width: 50%;
 }
 
 #p2{
-    font-family: 'Outfit', sans-serif;
+    text-align: center;
     font-size: 24px;
-    text-align: left;
-    color: white;
     display: inline-block;
-    padding-left: 12%;
-    width: 50%;
+    width: auto;
+    color: white;
+}
+
+p1{
+    padding-left: 15%;
+}
+
+p2{
+    padding-left: 13%;
+}
+
+p3{
+    padding-left: 19%;
 }
 
 p4{
-    font-family: 'Outfit', sans-serif;
-    font-size: 24px;
-    text-align: left;
-    color: white;
-    display: inline-block;
-    padding-left: 16%;
-    width: 50%;
-}
-
-p5{
-    font-family: 'Outfit', sans-serif;
     font-size: 24px;
     text-align: center;
-    color: white;
-    display: inline-block;
-    margin-left: 22%;
-    width: auto;
-}
-
-p6{
-    font-family: 'Outfit', sans-serif;
-    font-size: 24px;
-    text-align: center;
-    color: white;
-    display: inline-block;
-    margin-left: 17.1%;
-    width: auto;
-}
-
-p7{
-    font-family: 'Outfit', sans-serif;
-    font-size: 24px;
-    text-align: center;
-    color: white;
     display: inline-block;
     padding-left: 13.1%;
     width: auto;
 }
 
-p8{
-    font-family: 'Outfit', sans-serif;
+p5{
     font-size: 16px;
     text-align: center;
-    color:white;
     display: inline-flex;
     width: auto;
     margin-left: 5%;
 }
 
-p9{
-    font-family: 'Outfit', sans-serif;
+p6{
     font-size: 16px;
     text-align: center;
-    color:white;
     display: inline-flex;
     width: auto;
     margin-left: 4.5%;
 }
 
-p10{
-    font-family: 'Outfit', sans-serif;
+p7{
     font-size: 16px;
     text-align: center;
-    color:white;
     display: inline-flex;
     width: auto;
     margin-left: 3.85%;
 }
 
-p11{
-    font-family: 'Outfit', sans-serif;
+p8{
     font-size: 16px;
     text-align: center;
-    color:white;
     display: block;
     width: auto;
     margin-top: 0.5%;
@@ -194,7 +146,7 @@ p11{
     width: 22%;
     height: 100%;
     margin-top: -35%;
-    margin-left: 2%;
+    margin-left: -45%;
     /* background-color: #F9191F; */
     border: 2px solid #F9191F;
 }
@@ -213,7 +165,7 @@ p11{
     font-family: 'M PLUS 1 Code', sans-serif;
     font-size: 24px;
     text-align: center;
-    height: 100%;
+    height: 10%;
     width: 30%;
     margin-top: 5%;
     margin-left: 35%;

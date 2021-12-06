@@ -9,52 +9,39 @@
             <title>Emyreal Logistics</title>
         </head>
         <body>
-        <!-- <div id="controllers"></div>
-        <div id="container"></div>
-        <div id="blocker"></div>
-        <canvas class="webgl"></canvas> -->
+            <!-- <div id="controllers"></div>
+            <div id="container"></div>
+            <div id="blocker"></div>
+            <canvas class="webgl"></canvas>    -->
+
         <!-- <img src="assets\icon.png" class="lensimg" alt="lens">  -->
     <div id="bg">
-
         <h1>Jag_Bot 2071</h1>
         <p id='p0'>Empyreal Logistics</p>
-        <p id='p1'>The</p2>
-        <p5>{Sharp}</p5>
-        <p8>Deployment</p8>
-        <p3>The</p3>
-        <p6>{Fearless}</p6>
-        <p9>Station</p9>
-        <p4>The</p4>
-        <p7>{Predator}</p7>
-        <p10>U.K.</p10>
-        <p11>November 2071</p11>
+        <p1 id='p1'>The</p1>
+        <p2 id='p2'>{Sharp}</p2>
+        <!-- <p3 id='p1'>Deployment</p8> -->
+        <p3 id='p1'>The</p3>
+        <p6 id='p1'>{Fearless}</p6>
+        <!-- <p9 id='p1'>Station</p9> -->
+        <p4 id='p1'>The</p4>
+        <p7 id='p1'>{Predator}</p7>
+        <!-- <p10 id='p1'>U.K.</p10>
+        <p11 id='p1'>November 2071</p11> -->
         <img src="assets\lens.png" class="lensimg" alt="lens"> 
-        <div class= "leftbox">.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.</div>
-        <div class= "rightbox">.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.</div>
+        <!-- <div class= "leftbox">            
+            <div id="controllers"></div>
+            <div id="container"></div>
+            <div id="blocker"></div>
+            <canvas class="webgl"></canvas></div>
+        <div class= "rightbox"></div> -->
         <div class="tagline">The new revolutional patrol network</div>
     </div>
         </body>
         <script type="text/javascript" src="http://code.jquery.com/jquery-1.4.2.min.js"></script>
-        <script src="shader.js" ></script>
-        <script src="script.js" type = "module"></script>
+            <!-- <script src="shader.js" ></script>
+            <script src="script.js" type = "module"></script> -->
         <script>
-            const imagePath = 'bg_animation';
-            const imageName = 'bg00';
-            const totalFrames = 65;
 
-            var imgarray = [];
-
-            for (var i = 0; i < totalFrames + 1; i++){
-                imgarray.push(imagePath+ '/'+imageName+[i]+".jpg");
-            };
-            console.log(imgarray);
-
-            $(document).ready(() => {
-            for (var i = totalFrames + 1; i >= 0; i--) {
-                 $("#bg").append('<div class="bg" style="background-image: url('+imagePath+'/bg00'+i+'.jpg);"></div>');
-                // $("body").append(`<div class="body" style="background-image: url('${imgarray[i]}');"></div>`);
-                 console.log('hi');
-                }
-            });
         </script>
     </html> 

@@ -65,20 +65,20 @@ class Model {
         })
     }
 }
-
+const leftbox = document.getElementById('leftbox');
 /*  render system  */
 const renderer = new THREE.WebGLRenderer({
     antialias: true,
     alpha: true,
 });
-renderer.setSize(window.innerWidth, window.innerHeight); //change
-document.body.appendChild(renderer.domElement); //change
+renderer.setSize(leftbox.style.Width, leftbox.style.Height);
+document.getElementById('leftbox').appendChild(renderer.domElement); 
 
 /*  scene and camera setup  */
 const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera(
     50,
-    window.innerWidth / window.innerHeight, //change
+    leftbox.style.Width / leftbox.style.Height,
     0.1,
     100
 );
@@ -98,11 +98,11 @@ controls.addEventListener('end', function() {
 
 /* media responsive  */
 function onWindowResize() {
-    camera.aspect = window.innerWidth / window.innerHeight; //change
+    camera.aspect = leftbox.style.Width / leftbox.style.Height;
     camera.updateProjectionMatrix();
-    renderer.setSize(window.innerWidth, window.innerHeight); //change
+    renderer.setSize(leftbox.style.Width, leftbox.style.Height);
 }
-window.addEventListener('resize', onWindowResize, false);
+leftbox.style.addEventListener('resize', onWindowResize, false);
 
 /* model import */
 const human = new Model({
@@ -111,13 +111,25 @@ const human = new Model({
     scene: scene
 })
 
+const imagePath = 'bg_animation';
+const imageName = 'bg00';
+const totalFrames = 65;
+var back = document.getElementById('bg');
+
+var imgarray = [];
+
+for (var i = 0; i < totalFrames + 1; i++){
+    imgarray.push(imagePath+ '/'+imageName+[i]+".jpg");
+};
+
 /* animation EXTRA */
 let start_time = Date.now();
 const animate = function() {
-    requestAnimationFrame(animate);
-    renderer.render(scene, camera);
-   
+    requestAnimationFrame(imgarray);
 
+    for (var i = 0; i< totalFrames + 1; i++){
+        back.style.backgroundimage == 'url(imagePath+ '/'+imageName+[i]+".jpg")'
+    }
     //  human.shaderMaterial.uniforms.uTime.value = (Date.now() - start_time)*.0001;
 };
 animate();
