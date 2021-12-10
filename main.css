@@ -1,21 +1,23 @@
 body{
     margin: 0%;
-    margin-top: -2.1%;
+    padding: 0%;
+    background: #000000;
 }
 
 #bg{
+    display: sticky;
     background-color: black;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: inherit; 
     background-size: 100% auto;
     width:100%;
-    height:100%;
+    height:100vw;
 }
 
 canvas {
     position: fixed;
-    z-index: 0;
+    z-index: -1;
     top: 0;
     left: 0;
     width: 100%;
@@ -38,99 +40,12 @@ canvas {
     left: 0;
     bottom: 0;
     right: 0;
-    display: none;
 }
 
 h1{
     font-family: 'Rubik', sans-serif;
-    text-align: left;
-    font-size: 48px;
-    color: white;
-    display: block;
-    padding-left: 5%;
-    padding-top: 5%;
+    color: black
 }
-
-p{
-    font-family: 'Outfit', sans-serif;
-    color: white;
-    
-}
-#p0{
-    text-align: left;
-    display: block;
-    padding-left: 22%;
-}
-
-#p1{
-    text-align: left;
-    font-size: 24px;
-    display: inline-block;
-    color: white;
-    width: 50%;
-}
-
-#p2{
-    text-align: center;
-    font-size: 24px;
-    display: inline-block;
-    width: auto;
-    color: white;
-}
-
-p1{
-    padding-left: 15%;
-}
-
-p2{
-    padding-left: 13%;
-}
-
-p3{
-    padding-left: 19%;
-}
-
-p4{
-    font-size: 24px;
-    text-align: center;
-    display: inline-block;
-    padding-left: 13.1%;
-    width: auto;
-}
-
-p5{
-    font-size: 16px;
-    text-align: center;
-    display: inline-flex;
-    width: auto;
-    margin-left: 5%;
-}
-
-p6{
-    font-size: 16px;
-    text-align: center;
-    display: inline-flex;
-    width: auto;
-    margin-left: 4.5%;
-}
-
-p7{
-    font-size: 16px;
-    text-align: center;
-    display: inline-flex;
-    width: auto;
-    margin-left: 3.85%;
-}
-
-p8{
-    font-size: 16px;
-    text-align: center;
-    display: block;
-    width: auto;
-    margin-top: 0.5%;
-    margin-left: 89.3%;
-}
-
 
 .lensimg{
     display: block;
@@ -140,28 +55,7 @@ p8{
     margin-top: -15%;
 }
 
-.leftbox{
-    display: flex;
-    flex-direction:column;
-    width: 22%;
-    height: 100%;
-    margin-top: -35%;
-    margin-left: -45%;
-    /* background-color: #F9191F; */
-    border: 2px solid #F9191F;
-}
-
-.rightbox{
-    display: in-line-block;
-    width: 22%;
-    height: 100%;
-    margin-top: -30%;
-    margin-left: 76%;
-    /* background-color: #F9191F; */
-    border: 2px solid #F9191F;
-}
-
-.tagline{
+/* .tagline{
     font-family: 'M PLUS 1 Code', sans-serif;
     font-size: 24px;
     text-align: center;
@@ -171,4 +65,128 @@ p8{
     margin-left: 35%;
     color: black;
     background-color: #F9191F;
+} */
+
+.container {
+    display: grid; 
+    grid-template-columns: 1fr 1fr 1fr; 
+    grid-template-rows: 6em 65em 6em; 
+    gap: 0px 0px; 
+    background-color: grey;
+}
+
+.leftbox{
+    justify-self: center; 
+    align-self: center; 
+    grid-area: 2 / 1 / 3 / 2; 
+    width: 90%; 
+    height: 98%; 
+    background-color: rgb(17, 17, 17);
+    border: 3px solid #bd191fb7;
+    box-shadow: 1px 1px 10px 2px rgb(17,17,17);
+}
+
+.rightbox{
+    justify-self: center; 
+    align-self: center; 
+    grid-area: 2 / 3 / 3 / 4; 
+    width: 90%; 
+    height: 98%; 
+    background-color: rgb(17, 17, 17);
+    border: 3px solid #bd191fb7;
+    box-shadow: 1px 1px 10px 2px rgb(17,17,17);
+}
+
+.textrow {
+    justify-self: center; 
+    align-self: stretch; 
+    grid-area: 2 / 2 / 3 / 3; 
+    width: 75%; 
+}
+
+.poem {
+    justify-self: center; 
+    align-self: center; 
+    grid-area: 2 / 2 / 3 / 3; 
+    margin-top: 20em;
+}
+
+.textanim {
+    grid-area: 1 / 1 / 2 / 4; 
+    white-space: nowrap;
+  }
+
+  .textbox1 {
+    width: 18.8%; 
+    height: 1.5em; 
+    border: 1px solid #bd191fb7;
+    position: absolute;
+    top: 135sem;
+  }
+
+  .textbox2 {
+    width: 20.5%; 
+    height: 1.5em; 
+    border: 1px solid #bd191fb7;
+    position: absolute;
+    top: 138em;
+    left: -800px;
+  }
+  .textbox3 {
+    width: 12.4%; 
+    height: 1.5em; 
+    border: 1px solid #bd191fb7;
+    position: absolute;
+    top: 140em;
+  }
+
+.tagline{
+    font-family: 'M PLUS 1 Code', sans-serif;
+    grid-area: 3 / 1 / 4 / 4;
+    background-color: #F9191F;
+}
+
+.canvas {
+  justify-self: center; 
+  align-self: center; 
+  grid-area: 2 / 1 / 3 / 2; 
+  width: 89%; 
+  height: 97.5%; 
+}
+
+.canvas2 {
+  justify-self: center; 
+  align-self: center; 
+  grid-area: 2 / 3 / 3 / 4; 
+  width: 89%; 
+  height: 97.5%; 
+}
+
+#p1{
+    font-family: 'Outfit', sans-serif;
+    color: white;
+    text-align: center;
+}
+
+#p2{
+    font-family: 'M PLUS 1 Code', sans-serif;
+    font-size: 34px;
+    text-align: center; 
+    color: black;
+}
+
+p{
+    padding-top: 1em;
+    font-size: 24px;
+}
+
+p1{
+    position: absolute;
+    margin-top: 1em;
+    padding-left: 30em;
+    text-shadow: 3px 3px 30px black;
+}
+
+p2{
+    font-size: 20px;
 }

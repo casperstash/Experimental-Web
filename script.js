@@ -5,6 +5,32 @@ import { GLTFLoader } from 'https://cdn.skypack.dev/three@0.133.1/examples/jsm/l
 import { DRACOLoader } from 'https://cdn.skypack.dev/three@0.133.1/examples/jsm/loaders/DRACOLoader'
 import { MeshSurfaceSampler } from 'https://cdn.skypack.dev/three@0.133.1/examples/jsm/math/MeshSurfaceSampler'
 
+/*  For Testing  */
+const imagePath = 'bg_animation';
+const imageName = 'bg00';
+const totalFrames = 65;
+
+let imgarray = [];
+
+for (var i = 0; i < totalFrames + 1; i++){
+    imgarray.push(imagePath+ '/'+imageName+[i]+".jpg");
+    console.log(imgarray)
+};
+
+/*  Text Animation  */
+var textbox1 = document.getElementById('textbox1');
+let textbox2 = document.querySelector('textbox2');
+let textbox3 = document.querySelector('textbox3');
+
+window.onscroll = () =>{
+    let pos = window.scrollY - 800;
+    console.log(pos);
+};
+
+
+
+
+/*  Interactive Human Section  */
 /*  class for model  */
 class Model {
     constructor(obj) {
@@ -71,14 +97,14 @@ const renderer = new THREE.WebGLRenderer({
     antialias: true,
     alpha: true,
 });
-renderer.setSize(leftbox.style.Width, leftbox.style.Height);
-document.getElementById('leftbox').appendChild(renderer.domElement); 
+renderer.setSize(window.innerWidth, window.innerHeight);
+document.body.appendChild(renderer.domElement); 
 
 /*  scene and camera setup  */
 const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera(
     50,
-    leftbox.style.Width / leftbox.style.Height,
+    window.innerWidth / window.innerHeight,
     0.1,
     100
 );
@@ -102,7 +128,7 @@ function onWindowResize() {
     camera.updateProjectionMatrix();
     renderer.setSize(leftbox.style.Width, leftbox.style.Height);
 }
-leftbox.style.addEventListener('resize', onWindowResize, false);
+window.addEventListener('resize', onWindowResize, false);
 
 /* model import */
 const human = new Model({
@@ -110,26 +136,3 @@ const human = new Model({
     file: 'assets/human.glb',
     scene: scene
 })
-
-const imagePath = 'bg_animation';
-const imageName = 'bg00';
-const totalFrames = 65;
-var back = document.getElementById('bg');
-
-var imgarray = [];
-
-for (var i = 0; i < totalFrames + 1; i++){
-    imgarray.push(imagePath+ '/'+imageName+[i]+".jpg");
-};
-
-/* animation EXTRA */
-let start_time = Date.now();
-const animate = function() {
-    requestAnimationFrame(imgarray);
-
-    for (var i = 0; i< totalFrames + 1; i++){
-        back.style.backgroundimage == 'url(imagePath+ '/'+imageName+[i]+".jpg")'
-    }
-    //  human.shaderMaterial.uniforms.uTime.value = (Date.now() - start_time)*.0001;
-};
-animate();
