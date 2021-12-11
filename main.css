@@ -5,10 +5,19 @@ body{
 }
 
 #bg{
-    display: sticky;
+    height: 150vh;
     width: 100%;
-    height: 200em;
     background-color: black;
+    z-index: -1;
+}
+
+#logo{
+    display: inline-block;
+    width: 45em;
+    height: auto;
+    margin: -10% 25%;
+    opacity: 0%;
+    z-index: 0;
 }
 
 canvas {
@@ -39,28 +48,28 @@ canvas {
 }
 
 h1{
-    font-family: 'M PLUS 1 Code', sans-serif;
+     font-family: 'Outfit', sans-serif;
     color: white;
     font-size: 24px;
     position: absolute;
-    top: 5%;
-    left: 10%;
+    top: 12%;
+    left: 20%;
 }
 
 .icon{
     width: auto; 
-    height: 30%;
+    height: 15%;
     position: relative;
     top: 1em;
-    left: 2em;
+    left: 35em;
 }
 
 img{
     content:url(assets\\icon.png);
-    height: 10%;
+    position: relative;
+    height: 18%;
     width: auto;
-    position: sticky;
-    margin-top: auto;
+
 }
 
 .lensimg{
@@ -71,13 +80,18 @@ img{
     margin-top: -15%;
 }
 
-.wellbox {
+.welcome {
     position: relative;
-    width: 75%; 
-    height: 50%; 
-    border: 1px solid #bd191fb7;
-    background-color: rgba(255, 255, 255, 0.5);
+    width: 85%; 
+    height: 25%; 
+    background-color: white;
+    opacity: 50%;
+    z-index: 100;
+    top: 25%;
+    left: -1300px;
+    content-visibility: visible;
 }
+
 
 /* .tagline{
     font-family: 'M PLUS 1 Code', sans-serif;
@@ -97,6 +111,9 @@ img{
     grid-template-rows: 6em 65em 6em; 
     gap: 0px 0px; 
     background-color: grey;
+    z-index: 1;
+    opacity: 100;
+    width: 100%;
 }
 
 .leftbox{
@@ -146,6 +163,7 @@ img{
     border: 1px solid #bd191fb7;
     position: relative;
     top: 0;
+    left: 0;
   }
 
   .textbox2 {
