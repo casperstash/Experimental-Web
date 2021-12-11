@@ -1,13 +1,20 @@
-var textbox2 = document.getElementsByClassName('textbox2');
-var textbox3 = document.getElementsByClassName('textbox3');
+const textBox = document.getElementById('textbox2');
+const textbox3 = document.getElementById('textbox3');
 
-$(function (){
-    var left = $("#textbox2").css("left");
+
+console.log(textBox.style.left);
+
+$(function () {
+    var left2 = $(".textbox2").css("left");
+    window.onscroll = () =>{
+        let pos = window.scrollY - 1000;
+        left2 = `${pos}px`;
+        console.log(left2);
+    }
 });
 
-console.log(textbox2.style.left);
 
-window.onscroll = () =>{
-    let pos = window.scrollY - 800;
-    textbox2.style.top = `${pos}px`
-}
+// window.onscroll = () =>{
+//     let pos = window.scrollY - 800;
+//     console.log(pos);
+// }
