@@ -1,9 +1,5 @@
 gsap.registerPlugin(ScrollTrigger);
 //on Scroll animations
-// const video1 = document.querySelector('#video-controller');
-
-// video1.pause = true;
-
 window.onscroll = () => {
     let pos = window.scrollY;
     gsap.to("h1", {
@@ -22,6 +18,12 @@ window.onscroll = () => {
         y: 990,
         opacity: 0.0,
         ease: "linear"
+    });
+
+    gsap.to("#container", {
+        scrollTrigger: '#container',
+        duration: 5,
+        opacity: 1.0,
     });
 
     //welcome typewriter effect and show on screen
@@ -74,13 +76,6 @@ window.onscroll = () => {
         });
     };
 
-
-    gsap.to("#container", {
-        scrollTrigger: '#container',
-        duration: 3,
-        opacity: 1.0,
-    });
-
 // console.log(pos);
 };
 
@@ -115,6 +110,8 @@ window.onscroll = () => {
     });
 
     const contract = document.querySelector('.p7');
+    const info = document.querySelector(".info");
+    const video = document.querySelector('#video-controller');
 
     let trigger = contract.style.y;
 
@@ -129,6 +126,7 @@ window.onscroll = () => {
     });
 
     var images = document.querySelectorAll("img"),
+
     delayTime = 0,
     animationTime = 0.5,
     tl = new TimelineMax({
@@ -149,9 +147,47 @@ window.onscroll = () => {
     for (var i = 1; i < images.length; i++) {
         tl.to(images[i], animationTime, {
             autoAlpha:1, 
-            scale:1
+
         }, 
         (i-1) * (animationTime + delayTime));
         tl.set(images[i-1], {autoAlpha:0});
         console.log(i);
-    }
+        
+        
+        if (i == images[1]) {
+            gsap.to(".info", {
+                duration: 3,
+                opactiy: 1.0,
+                ease: Sine,  
+            });
+        };
+        // } else if(images[1] !==1){
+        //     gsap.to(".info", {
+        //         duration: 3,
+        //         opacity: 0.0,
+        //         ease: Sine,  
+        //     });
+        // };
+        
+    };
+
+// video.onloadeddata = function (){
+//     let videoDuration = video.duration;
+//     console.log("Loaded")
+
+//     gsap.to(video, 1, {
+//         currentTime: videoDuration,
+//         overwrite: true,
+//         scrollTrigger:{
+//             trigger: "#container",
+//             top: "top top",
+//             end: "bottom top",
+//             markers: true,
+//             pin: true,
+//             scrub: true
+//         }
+//     });
+
+//     if (videoDuration == 2){
+//     }
+// };
