@@ -1,3 +1,5 @@
+//made by Clarence Ma & Whitt Sellers
+
 //importing javascript libraries
 import * as THREE from 'https://cdn.skypack.dev/three@0.133.1';
 import { OrbitControls } from 'https://cdn.skypack.dev/three@0.133.1/examples/jsm/controls/OrbitControls.js';
@@ -5,7 +7,7 @@ import { GLTFLoader } from 'https://cdn.skypack.dev/three@0.133.1/examples/jsm/l
 import { DRACOLoader } from 'https://cdn.skypack.dev/three@0.133.1/examples/jsm/loaders/DRACOLoader'
 import { MeshSurfaceSampler } from 'https://cdn.skypack.dev/three@0.133.1/examples/jsm/math/MeshSurfaceSampler'
 
-/*  For Testing  */
+/*  for testing  */
 const imagePath = 'bg_animation';
 const imageName = 'bg00';
 const totalFrames = 65;
@@ -17,7 +19,7 @@ for (var i = 0; i < totalFrames + 1; i++){
     console.log(imgarray)
 };
 
-/*  Text Animation  */
+/*  text animation  */
 var textbox1 = document.getElementById('textbox1');
 let textbox2 = document.querySelector('textbox2');
 let textbox3 = document.querySelector('textbox3');
@@ -30,7 +32,7 @@ window.onscroll = () =>{
 
 
 
-/*  Interactive Human Section  */
+/*  interactive human section  */
 /*  class for model  */
 class Model {
     constructor(obj) {
@@ -42,7 +44,7 @@ class Model {
 
         this.isActive = false
         this.loader = new GLTFLoader()
-        // Configure and create Draco decoder. https://threejs.org/docs/?q=draco#examples/en/loaders/DRACOLoader
+        // configure and create Draco decoder. https://threejs.org/docs/?q=draco#examples/en/loaders/DRACOLoader
         this.dracoLoader = new DRACOLoader()
         this.dracoLoader.setDecoderPath('/')
         this.dracoLoader.setDecoderConfig( { type: 'js' } );
@@ -54,12 +56,12 @@ class Model {
         this.loader.load(this.file, 
             (response) => {
   
-    /*  Original Mesh  */
+    /*  original Mesh  */
             this.OriginalModelMesh = response.scene.children[0]
             this.OriginalModelMesh.material = this.meshMaterial
           
           
-    /* Shader Material */
+    /* shader Material */
     this.shaderMaterial = new THREE.ShaderMaterial({
 	    vertexShader: vertex,
 	    fragmentShader: fragment,
@@ -69,7 +71,7 @@ class Model {
     })
           
           
-    /*  Particles Geometry  */
+    /*  particles Geometry  */
     const sampler = new MeshSurfaceSampler(this.OriginalModelMesh).build();
     const numParticles = 20000;
     this.particlesGeometry = new THREE.BufferGeometry();
