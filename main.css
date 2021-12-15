@@ -201,9 +201,9 @@ img2{
     grid-template-areas: 
       "leftbox poem rightbox"
       "tagline tagline tagline"; 
-    background-image: url("assets\\background3.png");
+    /* background-image: url("assets\\background3.png");
     background-image: repeat;
-    background-position: center;
+    background-position: center; */
     z-index: 1;
     opacity: 100;
     width: auto;
